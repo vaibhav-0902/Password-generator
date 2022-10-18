@@ -17,40 +17,46 @@
 
 <body>
     <div class="container">
-        <!-- <div class="box"> -->
-            <div class="pwd-header">
-                <div class="pwd">
-                    <span class="pwd-text">Password Here</span>
-                    <button id="copy">Copy</button>
-                </div>
+
+        <!-- password body -->
+        <div class="pwd-header">
+            <div class="pwd">
+                <span class="pwd-text">Password Here</span>
+                <button id="copy">Copy</button>
+            </div>
+        </div>
+
+        <!-- password menu -->
+        <div class="form-body">
+
+            <div class="form-control">
+                <label for="length">Password Length</label>
+                <input type="number" id="num" max="20" min="8" value="8">
             </div>
 
-            <div class="form-body">
-                <div class="form-control">
-                    <label for="length">Password Length</label>
-                    <input type="len" id="num" max="20" min="8" value="8">
-                </div>
-                <div class="form-control">
-                    <label for="upper">Contain Uppercase letters</label>
-                    <input type="checkbox" id="upper">
-                </div>
-                <div class="form-control">
-                    <label for="lower">Contain Lowercase letters</label>
-                    <input type="checkbox" id="lower">
-                </div>
-                <div class="form-control">
-                    <labNumbers for="number">Contain Numbers</label>
-                        <input type="checkbox" id="num">
-                </div>
-                <div class="form-control">
-                    <label for="symbol">Contain Symbols</label>
-                    <input type="checkbox" id="sym">
-                </div>
-
-                <button id="gen" class="gen">Generate</button>
+            <div class="form-control">
+                <label for="upper">Contain Uppercase letters</label>
+                <input type="checkbox" id="upper">
             </div>
 
-        <!-- </div> -->
+            <div class="form-control">
+                <label for="lower">Contain Lowercase letters</label>
+                <input type="checkbox" id="lower">
+            </div>
+
+            <div class="form-control">
+                <label for="number">Contain Numbers</label>
+                <input type="checkbox" id="num">
+            </div>
+
+            <div class="form-control">
+                <label for="symbol">Contain Symbols</label>
+                <input type="checkbox" id="sym">
+            </div>
+
+            <button id="gen" class="gen">Generate</button>
+        </div>
+
 
     </div>
 </body>
