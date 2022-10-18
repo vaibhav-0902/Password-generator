@@ -8,46 +8,50 @@
     <title>Password Generator</title>
 
     <!-- links, CSS, fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-
-        <div class="box">
-            <div class="form-container">
-                <div class="pw-container">
-                    <span id="pwd">Password</span>
+        <!-- <div class="box"> -->
+            <div class="pwd-header">
+                <div class="pwd">
+                    <span class="pwd-text">Password Here</span>
+                    <button id="copy">Copy</button>
                 </div>
-
-                <!-- length -->
-                <label for="length">Length</label>
-                <input id="len" value="10" max="20" min="8" type="number">
-
-                <!-- Alphabets, Numbers, Symbols Field -->
-                <div class="form-control">
-                    <label for="upper">Contains Upper Case</label>
-                    <input id="upper" type="checkbox">
-                </div>
-
-                <div class="form-control">
-                    <label for="lower">Contains Lower Case</label>
-                    <input id="lower" type="checkbox">
-                </div>
-
-                <div class="form-control">
-                    <label for="number">Contains a Number</label>
-                    <input id="number" type="checkbox">
-                </div>
-
-                <div class="form-control">
-                    <label for="symbol">Contains a Symbol</label>
-                    <input id="symbol" type="checkbox">
-                </div>
-
-                <button id="generate">Generate</button>
             </div>
-        </div>
+
+            <div class="form-body">
+                <div class="form-control">
+                    <label for="length">Password Length</label>
+                    <input type="len" id="num" max="20" min="8" value="8">
+                </div>
+                <div class="form-control">
+                    <label for="upper">Contain Uppercase letters</label>
+                    <input type="checkbox" id="upper">
+                </div>
+                <div class="form-control">
+                    <label for="lower">Contain Lowercase letters</label>
+                    <input type="checkbox" id="lower">
+                </div>
+                <div class="form-control">
+                    <labNumbers for="number">Contain Numbers</label>
+                        <input type="checkbox" id="num">
+                </div>
+                <div class="form-control">
+                    <label for="symbol">Contain Symbols</label>
+                    <input type="checkbox" id="sym">
+                </div>
+
+                <button id="gen" class="gen">Generate</button>
+            </div>
+
+        <!-- </div> -->
+
     </div>
 </body>
 
