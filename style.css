@@ -32,7 +32,8 @@ body {
     font-weight: 800;
     border-radius: 3px;
 }
-.pwd-text {
+
+#pwd-text {
     margin-left: 15px;
 }
 
