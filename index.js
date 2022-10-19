@@ -37,8 +37,9 @@ let getSymbols = () => {
 let generatePassword = () => {
     const len = lenElm.value;
     let password = "";
-    if (len > len.value) {
-        return null;
+    if (len > 20 || len < 8) {
+        alert("Password length must be between 8 to 20 characters");
+        return ;
     }
 
     for (i = 0; i < len; i++) {
@@ -46,7 +47,7 @@ let generatePassword = () => {
         password += createdPass;
     }
     pwdElm.innerText = password;
-    console.log(password);
+    // console.log(password);
 }
 
 let generateX = () => {
@@ -64,7 +65,9 @@ let generateX = () => {
     if (symElm.checked) {
         passArr.push(getSymbols());
     }
-    if (passArr.length === 0) return "";
+    if (passArr.length === 0)
+    return "";
+
     return passArr[Math.floor(Math.random() * passArr.length)]
 }
 
@@ -74,17 +77,15 @@ copyElm.addEventListener("click", () => {
     const textarea = document.createElement("textarea");
     password = pwdElm.innerText;
 
-    if (!password) {
+    if (!password || pwdElm.innerText == "Password Here") {
+        alert("Please select at least one checkbox and then Generate password");
+        password = "";
         return;
     }
     textarea.value = password;
-    console.log(password);
+    // console.log(password);
 
-    document.body.appendChild(textarea);
-    textarea.select();
-
-    document.execCommand("copy");
-    textarea.remove();
+    navigator.clipboard.writeText(pwdElm.innerText);
 
     alert("Password copied to the clipboard");
 })
